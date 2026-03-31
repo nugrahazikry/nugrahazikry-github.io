@@ -1,0 +1,178 @@
+.publications,
+.teaching,
+.achievements-section {
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swipe-header {
+  display: none;
+}
+
+.pub-header {
+  display: none;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.swipe-btn {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(8, 11, 31, 0.85);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-family: var(--font);
+  position: absolute;
+  z-index: 2;
+}
+
+.swipe-btn-left  { left: -19px; }
+.swipe-btn-right { right: -19px; }
+
+.swipe-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(232, 200, 74, 0.12);
+}
+
+.swipe-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.swipe-track--right {
+  animation: pubSlideRight 0.35s ease-out;
+}
+
+.swipe-track--left {
+  animation: pubSlideLeft 0.35s ease-out;
+}
+
+@keyframes pubSlideRight {
+  from { transform: translateX(32px); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes pubSlideLeft {
+  from { transform: translateX(-32px); }
+  to   { transform: translateX(0); }
+}
+
+.swipe-track::-webkit-scrollbar {
+  display: none;
+}
+
+.swipe-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s, transform 0.3s, background 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.swipe-card:hover {
+  border-color: rgba(232, 200, 74, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+.swipe-card-img {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1035 0%, #1a1d3a 100%);
+}
+
+.swipe-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.swipe-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.4rem 0;
+}
+
+.swipe-category {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(232, 200, 74, 0.08);
+  border: 1px solid rgba(232, 200, 74, 0.2);
+  padding: 0.2rem 0.7rem;
+  border-radius: 4px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  cursor: default;
+}
+
+.swipe-category:hover {
+  border-color: rgba(232, 200, 74, 0.9);
+  background: rgba(232, 200, 74, 0.15);
+  box-shadow: 0 0 8px rgba(232, 200, 74, 0.5), 0 0 18px rgba(232, 200, 74, 0.2);
+}
+
+.swipe-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  padding: 0.6rem 1.4rem 0;
+  min-height: 4.5rem;
+}
+
+.swipe-card-excerpt {
+  font-size: 0.82rem;
+  color: var(--text);
+  line-height: 1.75;
+  flex: 1;
+  padding: 0.5rem 1.4rem 0;
+  text-align: justify;
+}
+
+.swipe-read-more {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 1rem 1.4rem;
+  transition: opacity 0.2s, text-shadow 0.2s;
+}
+
+.swipe-card:hover .swipe-read-more {
+  opacity: 1;
+}
+
+.swipe-read-more:hover {
+  text-shadow: 0 0 8px rgba(232, 200, 74, 0.7), 0 0 18px rgba(232, 200, 74, 0.3);
+}
+
+@media (max-width: 480px) {
+  .swipe-card {
+    flex: 0 0 280px;
+  }
+}

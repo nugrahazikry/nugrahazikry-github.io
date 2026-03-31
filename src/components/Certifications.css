@@ -1,0 +1,116 @@
+.certifications {
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 1.8rem;
+  border-left: 3px solid var(--accent);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.cert-card:hover {
+  border-color: rgba(232, 200, 74, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cert-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.cert-period {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.cert-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cert-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+.cert-type-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.cert-type {
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.cert-details {
+  font-size: 0.82rem;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.cert-details strong {
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+.cert-details-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cert-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.cert-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent2);
+  background: rgba(106, 239, 255, 0.05);
+  border: 1px solid rgba(106, 239, 255, 0.35);
+  padding: 0.2rem 0.75rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: default;
+}
+
+.cert-tag:hover {
+  background: rgba(106, 239, 255, 0.12);
+  border-color: rgba(106, 239, 255, 0.8);
+}

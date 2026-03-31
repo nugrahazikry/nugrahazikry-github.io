@@ -1,0 +1,11 @@
+.teaching {
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swipe-date {
+  font-size: 0.78rem;
+  color: var(--text);
+  font-weight: 400;
+}
